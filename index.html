@@ -1,4 +1,4 @@
-<?php
+<!--<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (empty($_POST['name'])) {
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 }
-?>
+?>-->
 <!doctype html>
 <html lang="en">
 
@@ -140,7 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="col-md-12">
                 <div class="form">
                     <h3>Get In <span class="gold">Touch</span></h3>
-                    <?php if (isset($nameError) || isset($emailError) || isset($messageError)) : ?>
+                    <!--<?php if (isset($nameError) || isset($emailError) || isset($messageError)) : ?>
                         <div id="error-message">
                             <p><?= isset($nameError) ? $nameError . '<br>' : '' ?></p>
                             <p><?= isset($emailError) ? $emailError . '<br>' : '' ?></p>
@@ -151,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div id="success-message">
                             <p>Your message has been sent</p>
                         </div>
-                    <?php endif; ?>
+                    <?php endif; ?>-->
                     <form method="POST" action="index.php#contact">
                         <div class="form-row">
                             <div class="form-group col-md-6">
