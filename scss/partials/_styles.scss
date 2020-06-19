@@ -1,0 +1,309 @@
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: $Silver;
+
+    header {
+        margin-bottom: 2rem;
+
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+
+            h1 {
+                font-family: "Bebas Neue", sans-serif;
+                font-size: 2em;
+                color: $Grey;
+                letter-spacing: 3px;
+                margin: 0;
+
+                &:before,
+                &:after {
+                    content: "\2022";
+                    padding: 5px;
+                    font-size: 1em;
+                    vertical-align: middle;
+                    transition: all ease-in-out 0.2s;
+                }
+
+                &:before {
+                    color: $Gold;
+                }
+
+                &:after {
+                    color: $Purple;
+                }
+            }
+        }
+        .navbar {
+            height: 150px;
+            list-style-type: none;
+            margin-bottom: 0;
+
+            li {
+                a {
+                    font-family: "Roboto Regular", sans-serif;
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                    color: $Grey;
+                    transition: all ease-in-out 0.2s;
+
+                    &:hover,
+                    &:focus {
+                        color: $Purple;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero {
+        margin-bottom: 4.5rem;
+
+        .intro {
+            h1 {
+                font-family: "Bebas Neue", sans-serif;
+                font-size: 10em;
+                line-height: .9;
+                color: $Purple;
+                margin-bottom: 0;
+    
+                .gold {
+                    color: $Gold;
+                }
+            }
+
+            h2 {
+                font-family: "Bebas Neue", sans-serif;
+                font-size: 7em;
+                line-height: .9;
+                color: $Purple;
+                margin-left: 2.5px;
+                margin-bottom: 2rem;
+    
+                .gold {
+                    color: $Gold;
+                    margin-left: 2.5px;
+
+                }
+            }
+
+            .scroll-down {
+                display: inline-block;
+                width: 3px;
+                height: 80px;
+                background: $Gold;
+                margin: 0 7px;
+                animation: scrollDown 2s ease infinite;
+            }
+
+            h3 {
+                font-family: "Bebas Neue", sans-serif;
+                font-size: 2.5em;
+                color: $Purple;
+                display: inline-block;
+                vertical-align: top;
+                line-height: .9;
+            }
+        }
+    }
+
+    .about {
+        .profile {
+            position: relative;
+            width: 650px;
+            margin: 0 auto;
+            padding: 5px;
+
+            h3 {
+                font-family: "Bebas Neue", sans-serif;
+                font-size: 40px;
+                color: $Purple;
+                letter-spacing: 3px;
+                margin-bottom: 1rem;
+
+                .gold {
+                    color: $Gold;
+                }
+            }
+
+            p {
+                font-family: "Roboto Regular", sans-serif;
+                font-size: 16px;
+                color: $Grey;
+                line-height: 2;
+            }
+
+            .btn {
+                width: 150px;
+                display: block;
+                margin: 2rem auto;
+                border-radius: 0;
+                padding: 0.75rem;
+                font-family: "Roboto Regular", sans-serif;
+                font-size: 16px;
+                color: $Grey;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+
+                &:hover,
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 0 0;
+                }
+            }
+        }
+    }
+
+    .work {
+        .item {
+            padding: 1rem;
+
+            &:hover {
+                img {
+                    opacity: 0.35;
+                }
+
+                span {
+                    opacity: 1;
+                }
+            }
+
+            img,
+            span {
+                transition: all ease-in-out 0.5s;
+            }
+
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: "Oswald Regular", sans-serif;
+                font-size: 1.5rem;
+                color: $Grey;
+                letter-spacing: 3px;
+                line-height: 1.3;
+                text-align: center;
+                opacity: 0;
+            }
+        }
+    }
+
+    .contact {
+        .form {
+            position: relative;
+            width: 650px;
+            margin: 0 auto;
+            padding: 5px;
+
+            #error-message,
+            #success-message {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 15px;
+                border: 2px solid;
+                width: 400px;
+                margin: 0 auto 1.5rem;
+
+                p {
+                    font-family: "Roboto Regular", sans-serif;
+                    font-size: 16px;
+                    color: $Grey;
+                    margin-bottom: 0;
+                }
+            }
+
+            h3 {
+                font-family: "Bebas Neue", sans-serif;
+                font-size: 40px;
+                color: $Purple;
+                letter-spacing: 3px;
+                margin-bottom: 1rem;
+
+                .gold {
+                    color: $Gold;
+                }
+            }
+
+            form {
+                .form-group {
+                    input,
+                    textarea {
+                        font-family: "Roboto Regular", sans-serif;
+                        font-size: 16px;
+                        background: transparent;
+                        border: none;
+                        border-bottom: 1px solid $Grey;
+                        border-radius: 0;
+                        padding: 0;
+
+                        &:focus {
+                            box-shadow: 0 0 0 0;
+                            outline: none;
+                            border-color: $Purple;
+                        }
+
+                        &:focus,
+                        &.not-empty {
+                            + .label {
+                                transform: translateY(-20px);
+                                color: $Purple;
+                            }
+                        }
+                    }
+
+                    textarea {
+                        height: 40px;
+                        max-height: 200px;
+                    }
+
+                    .label {
+                        font-family: "Roboto Regular", sans-serif;
+                        font-size: 16px;
+                        position: absolute;
+                        top: 5px;
+                        color: $Grey;
+                        transition: all ease-in-out 0.2s;
+                    }
+                }
+
+                .form-group.message {
+                    margin-top: 3rem;
+                }
+
+                .form-group.send {
+                    text-align: center;
+                    margin-top: 1.5rem;
+
+                    .btn {
+                        width: 150px;
+                        display: block;
+                        margin: 2rem auto;
+                        border-radius: 0;
+                        padding: 0.75rem;
+                        font-family: "Roboto Regular", sans-serif;
+                        font-size: 16px;
+                        letter-spacing: 3px;
+
+                        &:hover,
+                        &:focus {
+                            outline: none;
+                            box-shadow: 0 0 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

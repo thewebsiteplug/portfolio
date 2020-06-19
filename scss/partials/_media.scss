@@ -1,0 +1,40 @@
+@media (max-width: 575.98px) {
+  body {
+    header {
+      margin-bottom: 0;
+
+      .logo {
+        height: 100px;
+
+        h1 {
+          font-size: 40px;
+        }
+      }
+
+      .navbar {
+        display: none;
+      }
+    }
+
+    .hero {
+      h1 {
+        font-size: 70px;
+      }
+    }
+
+    .about {
+      .profile {
+        width: 100%;
+      }
+    
+    }
+    .contact {
+      .form {
+        width: 100%;
+      }
+    }
+  }
+
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
