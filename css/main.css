@@ -37,7 +37,7 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  background: #E8EDDF;
+  background: #FFFCF9;
 }
 body header {
   margin-bottom: 2rem;
@@ -58,18 +58,16 @@ body header .logo h1 {
   letter-spacing: 3px;
   margin: 0;
 }
+body header .logo h1 span {
+  color: #E85F5C;
+}
 body header .logo h1:before, body header .logo h1:after {
   content: "•";
   padding: 5px;
   font-size: 1em;
   vertical-align: middle;
+  color: #3DA5D9;
   transition: all ease-in-out 0.2s;
-}
-body header .logo h1:before {
-  color: #F5CB5C;
-}
-body header .logo h1:after {
-  color: #3A0320;
 }
 body header .navbar {
   height: 150px;
@@ -84,7 +82,7 @@ body header .navbar li a {
   transition: all ease-in-out 0.2s;
 }
 body header .navbar li a:hover, body header .navbar li a:focus {
-  color: #3A0320;
+  color: #E85F5C;
 }
 body .hero {
   margin-bottom: 4.5rem;
@@ -93,36 +91,59 @@ body .hero .intro h1 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 10em;
   line-height: 0.9;
-  color: #3A0320;
+  color: #333533;
   margin-bottom: 0;
 }
-body .hero .intro h1 .gold {
-  color: #F5CB5C;
+body .hero .intro h1 span {
+  color: #E85F5C;
+}
+body .hero .intro h1 span:before {
+  content: "Ben";
+  color: #3DA5D9;
+  position: absolute;
+  z-index: -1;
+  margin-left: -5px;
+  margin-top: 5px;
 }
 body .hero .intro h2 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 7em;
+  font-size: 8em;
   line-height: 0.9;
-  color: #3A0320;
-  margin-left: 2.5px;
+  color: #333533;
+  margin-left: 2px;
   margin-bottom: 2rem;
 }
-body .hero .intro h2 .gold {
-  color: #F5CB5C;
-  margin-left: 2.5px;
+body .hero .intro h2 span {
+  color: #E85F5C;
+}
+body .hero .intro h2 span:before {
+  content: "Websites";
+  color: #3DA5D9;
+  position: absolute;
+  z-index: -1;
+  margin-left: -5px;
+  margin-top: 5px;
+}
+body .hero .intro h2 span:first-of-type:before {
+  content: "Design";
+  color: #3DA5D9;
+  position: absolute;
+  z-index: -1;
+  margin-left: -5px;
+  margin-top: 5px;
 }
 body .hero .intro .scroll-down {
   display: inline-block;
   width: 3px;
-  height: 80px;
-  background: #F5CB5C;
+  height: 50px;
+  background: #E85F5C;
   margin: 0 7px;
   animation: scrollDown 2s ease infinite;
 }
 body .hero .intro h3 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 2.5em;
-  color: #3A0320;
+  font-size: 2em;
+  color: #333533;
   display: inline-block;
   vertical-align: top;
   line-height: 0.9;
@@ -136,12 +157,20 @@ body .about .profile {
 body .about .profile h3 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 40px;
-  color: #3A0320;
+  color: #333533;
   letter-spacing: 3px;
   margin-bottom: 1rem;
 }
-body .about .profile h3 .gold {
-  color: #F5CB5C;
+body .about .profile h3 span {
+  color: #E85F5C;
+}
+body .about .profile h3 span:before {
+  content: "Myself";
+  color: #3DA5D9;
+  position: absolute;
+  z-index: -1;
+  margin-left: -1.5px;
+  margin-top: 1.5px;
 }
 body .about .profile p {
   font-family: "Roboto Regular", sans-serif;
@@ -217,12 +246,20 @@ body .contact .form #success-message p {
 body .contact .form h3 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 40px;
-  color: #3A0320;
+  color: #333533;
   letter-spacing: 3px;
   margin-bottom: 1rem;
 }
-body .contact .form h3 .gold {
-  color: #F5CB5C;
+body .contact .form h3 span {
+  color: #E85F5C;
+}
+body .contact .form h3 span:before {
+  content: "Touch";
+  color: #3DA5D9;
+  position: absolute;
+  z-index: -1;
+  margin-left: -1.5px;
+  margin-top: 1.5px;
 }
 body .contact .form form .form-group input,
 body .contact .form form .form-group textarea {
@@ -238,13 +275,13 @@ body .contact .form form .form-group input:focus,
 body .contact .form form .form-group textarea:focus {
   box-shadow: 0 0 0 0;
   outline: none;
-  border-color: #3A0320;
+  border-color: #E85F5C;
 }
 body .contact .form form .form-group input:focus + .label, body .contact .form form .form-group input.not-empty + .label,
 body .contact .form form .form-group textarea:focus + .label,
 body .contact .form form .form-group textarea.not-empty + .label {
   transform: translateY(-20px);
-  color: #3A0320;
+  color: #E85F5C;
 }
 body .contact .form form .form-group textarea {
   height: 40px;

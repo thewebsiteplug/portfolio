@@ -26,21 +26,18 @@ body {
                 letter-spacing: 3px;
                 margin: 0;
 
+                span {
+                    color: $Red;
+                }
+
                 &:before,
                 &:after {
                     content: "\2022";
                     padding: 5px;
                     font-size: 1em;
                     vertical-align: middle;
+                    color: $Blue;
                     transition: all ease-in-out 0.2s;
-                }
-
-                &:before {
-                    color: $Gold;
-                }
-
-                &:after {
-                    color: $Purple;
                 }
             }
         }
@@ -59,7 +56,7 @@ body {
 
                     &:hover,
                     &:focus {
-                        color: $Purple;
+                        color: $Red;
                     }
                 }
             }
@@ -73,46 +70,73 @@ body {
             h1 {
                 font-family: "Bebas Neue", sans-serif;
                 font-size: 10em;
-                line-height: .9;
-                color: $Purple;
+                line-height: 0.9;
+                color: $Grey;
                 margin-bottom: 0;
-    
-                .gold {
-                    color: $Gold;
+
+                span {
+                    color: $Red;
+
+                    &:before {
+                        content: "Ben";
+                        color: $Blue;
+                        position: absolute;
+                        z-index: -1;
+                        margin-left: -5px;
+                        margin-top: 5px;
+                    }
                 }
             }
 
             h2 {
                 font-family: "Bebas Neue", sans-serif;
-                font-size: 7em;
-                line-height: .9;
-                color: $Purple;
-                margin-left: 2.5px;
+                font-size: 8em;
+                line-height: 0.9;
+                color: $Grey;
+                margin-left: 2px;
                 margin-bottom: 2rem;
-    
-                .gold {
-                    color: $Gold;
-                    margin-left: 2.5px;
 
+                span {
+                    color: $Red;
+
+                    &:before {
+                        content: "Websites";
+                        color: $Blue;
+                        position: absolute;
+                        z-index: -1;
+                        margin-left: -5px;
+                        margin-top: 5px;
+                    }
+
+                    &:first-of-type {
+                        &:before {
+                            content: "Design";
+                            color: $Blue;
+                            position: absolute;
+                            z-index: -1;
+                            margin-left: -5px;
+                            margin-top: 5px;
+                        }
+                    }
                 }
             }
 
             .scroll-down {
                 display: inline-block;
                 width: 3px;
-                height: 80px;
-                background: $Gold;
+                height: 50px;
+                background: $Red;
                 margin: 0 7px;
                 animation: scrollDown 2s ease infinite;
             }
 
             h3 {
                 font-family: "Bebas Neue", sans-serif;
-                font-size: 2.5em;
-                color: $Purple;
+                font-size: 2em;
+                color: $Grey;
                 display: inline-block;
                 vertical-align: top;
-                line-height: .9;
+                line-height: 0.9;
             }
         }
     }
@@ -127,12 +151,21 @@ body {
             h3 {
                 font-family: "Bebas Neue", sans-serif;
                 font-size: 40px;
-                color: $Purple;
+                color: $Grey;
                 letter-spacing: 3px;
                 margin-bottom: 1rem;
 
-                .gold {
-                    color: $Gold;
+                span {
+                    color: $Red;
+
+                    &:before {
+                        content: "Myself";
+                        color: $Blue;
+                        position: absolute;
+                        z-index: -1;
+                        margin-left: -1.5px;
+                        margin-top: 1.5px;
+                    }
                 }
             }
 
@@ -227,12 +260,21 @@ body {
             h3 {
                 font-family: "Bebas Neue", sans-serif;
                 font-size: 40px;
-                color: $Purple;
+                color: $Grey;
                 letter-spacing: 3px;
                 margin-bottom: 1rem;
 
-                .gold {
-                    color: $Gold;
+                span {
+                    color: $Red;
+
+                    &:before {
+                        content: "Touch";
+                        color: $Blue;
+                        position: absolute;
+                        z-index: -1;
+                        margin-left: -1.5px;
+                        margin-top: 1.5px;
+                    }
                 }
             }
 
@@ -251,14 +293,14 @@ body {
                         &:focus {
                             box-shadow: 0 0 0 0;
                             outline: none;
-                            border-color: $Purple;
+                            border-color: $Red;
                         }
 
                         &:focus,
                         &.not-empty {
                             + .label {
                                 transform: translateY(-20px);
-                                color: $Purple;
+                                color: $Red;
                             }
                         }
                     }
