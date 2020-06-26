@@ -71,7 +71,7 @@ body {
     }
 
     .hero {
-        margin-bottom: 2rem;
+        margin-bottom: 10rem;
 
         .intro {
             h1 {
@@ -130,6 +130,8 @@ body {
     }
 
     .about {
+        margin-bottom: 10rem;
+
         .profile {
             position: relative;
             width: 650px;
@@ -171,12 +173,12 @@ body {
                 background: linear-gradient(45deg, $secondaryPurple, $brandPurple, $Pink);
                 background-size: 300%;
                 text-align: center;
-                padding: .85rem 1.2rem;
+                padding: 0.85rem 1.2rem;
                 border: 0;
                 border-radius: 25px;
                 width: 160px;
                 display: block;
-                margin: 3rem auto;
+                margin: 3rem auto 0;
                 letter-spacing: 3px;
 
                 &:hover,
@@ -188,35 +190,65 @@ body {
     }
 
     .work {
+        margin-bottom: 10rem;
+
+        h3 {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 50px;
+            color: $White;
+            width: 650px;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            margin: 0 auto;
+
+            span {
+                color: $brandPurple;
+
+                &:before {
+                    content: "Work";
+                    color: $Pink;
+                    position: absolute;
+                    z-index: -1;
+                    margin-left: -1.5px;
+                    margin-top: 1.5px;
+                }
+            }
+        }
+
         .item {
-            padding: 1rem;
+            width: 300px;
+            margin: 0 auto;
+
+            a {
+                text-decoration: none;
+
+                img {
+                    -webkit-filter: grayscale(100%);
+                    filter: grayscale(100%);
+                    -webkit-transition: 0.5s ease-in-out;
+                    transition: 0.5s ease-in-out;
+                }
+
+                h6 {
+                    font-family: "Roboto Regular", sans-serif;
+                    font-size: 16px;
+                    color: $White;
+                    letter-spacing: 3px;
+                    margin-bottom: 0;
+                    text-align: center;
+                    transition: all ease-in-out .5s;
+                }
+            }
 
             &:hover {
                 img {
-                    opacity: 0.35;
+                    -webkit-filter: grayscale(0);
+                    filter: grayscale(0);
                 }
 
-                span {
-                    opacity: 1;
+                h6 {
+                    color: $Pink;
                 }
-            }
-
-            img,
-            span {
-                transition: all ease-in-out 0.5s;
-            }
-
-            span {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-family: "Oswald Regular", sans-serif;
-                font-size: 1.5rem;
-                letter-spacing: 3px;
-                line-height: 1.3;
-                text-align: center;
-                opacity: 0;
             }
         }
     }
@@ -281,14 +313,14 @@ body {
                         &:focus {
                             box-shadow: 0 0 0 0;
                             outline: none;
-                            border-color: $brandPurple;
+                            border-color: $Pink;
                         }
 
                         &:focus,
                         &.not-empty {
                             + .label {
                                 transform: translateY(-20px);
-                                color: $brandPurple;
+                                color: $Pink;
                             }
                         }
                     }
@@ -322,14 +354,14 @@ body {
                         background: linear-gradient(45deg, $secondaryPurple, $brandPurple, $Pink);
                         background-size: 300%;
                         text-align: center;
-                        padding: .85rem 1.2rem;
+                        padding: 0.85rem 1.2rem;
                         border: 0;
                         border-radius: 25px;
                         width: 160px;
                         display: block;
                         margin: 3rem auto;
                         letter-spacing: 3px;
-        
+
                         &:hover,
                         &:focus {
                             animation: GradientAnimation 3s linear infinite;
