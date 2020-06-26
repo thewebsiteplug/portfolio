@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Bebas Neue";
   src: url(../fonts/BebasNeue-Regular.ttf);
@@ -15,29 +14,23 @@
   font-family: "Roboto Bold";
   src: url(../fonts/Roboto-Bold.ttf);
 }
-@keyframes scrollDown {
+@keyframes GradientAnimation {
   0% {
-    transform-origin: top;
-    transform: scaleY(0);
+    background-position: 0% 50%;
   }
-  45% {
-    transform-origin: top;
-    transform: scaleY(1);
-  }
-  55% {
-    transform-origin: bottom;
-    transform: scaleY(1);
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    transform-origin: bottom;
-    transform: scaleY(0);
+    background-position: 0% 50%;
   }
 }
 body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  background: #FFFCF9;
+  background: url("../images/body-background.svg") no-repeat center fixed;
+  background-size: cover;
 }
 body header {
   margin-bottom: 2rem;
@@ -48,105 +41,94 @@ body header a:hover {
 body header .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 150px;
+  justify-content: left;
+  height: 200px;
 }
 body header .logo h1 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 2em;
-  color: #333533;
+  font-size: 45px;
+  color: #fffcf9;
   letter-spacing: 3px;
   margin: 0;
 }
 body header .logo h1 span {
-  color: #E85F5C;
+  color: #A200F2;
+  margin-left: 5px;
+  margin-right: 3px;
+  font-size: 55px;
 }
-body header .logo h1:before, body header .logo h1:after {
-  content: "•";
-  padding: 5px;
-  font-size: 1em;
-  vertical-align: middle;
-  color: #3DA5D9;
-  transition: all ease-in-out 0.2s;
+body header .logo h1 span:before {
+  content: "Website";
+  color: #FF0D81;
+  position: absolute;
+  z-index: -1;
+  margin-left: -1.5px;
+  margin-top: 1.5px;
 }
 body header .navbar {
-  height: 150px;
+  height: 200px;
   list-style-type: none;
   margin-bottom: 0;
 }
 body header .navbar li a {
   font-family: "Roboto Regular", sans-serif;
   font-size: 16px;
+  color: #fffcf9;
   letter-spacing: 2px;
-  color: #333533;
-  transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.5s;
+}
+body header .navbar li a.current {
+  color: #A200F2;
 }
 body header .navbar li a:hover, body header .navbar li a:focus {
-  color: #E85F5C;
+  color: #FF0D81;
 }
 body .hero {
-  margin-bottom: 4.5rem;
+  margin-bottom: 2rem;
 }
 body .hero .intro h1 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 10em;
+  font-size: 8em;
+  color: #fffcf9;
   line-height: 0.9;
-  color: #333533;
   margin-bottom: 0;
 }
 body .hero .intro h1 span {
-  color: #E85F5C;
+  color: #A200F2;
 }
 body .hero .intro h1 span:before {
-  content: "Ben";
-  color: #3DA5D9;
+  content: "Ben!";
+  color: #FF0D81;
   position: absolute;
   z-index: -1;
-  margin-left: -5px;
-  margin-top: 5px;
+  margin-left: -3px;
+  margin-top: 3px;
 }
 body .hero .intro h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 8em;
+  color: #fffcf9;
   line-height: 0.9;
-  color: #333533;
-  margin-left: 2px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 body .hero .intro h2 span {
-  color: #E85F5C;
+  color: #A200F2;
 }
 body .hero .intro h2 span:before {
-  content: "Websites";
-  color: #3DA5D9;
+  content: "Websites.";
+  color: #FF0D81;
   position: absolute;
   z-index: -1;
-  margin-left: -5px;
-  margin-top: 5px;
+  margin-left: -3px;
+  margin-top: 3px;
 }
 body .hero .intro h2 span:first-of-type:before {
   content: "Design";
-  color: #3DA5D9;
+  color: #FF0D81;
   position: absolute;
   z-index: -1;
-  margin-left: -5px;
-  margin-top: 5px;
-}
-body .hero .intro .scroll-down {
-  display: inline-block;
-  width: 3px;
-  height: 50px;
-  background: #E85F5C;
-  margin: 0 7px;
-  animation: scrollDown 2s ease infinite;
-}
-body .hero .intro h3 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 2em;
-  color: #333533;
-  display: inline-block;
-  vertical-align: top;
-  line-height: 0.9;
+  margin-left: -3px;
+  margin-top: 3px;
 }
 body .about .profile {
   position: relative;
@@ -156,17 +138,17 @@ body .about .profile {
 }
 body .about .profile h3 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 40px;
-  color: #333533;
+  font-size: 50px;
+  color: #fffcf9;
   letter-spacing: 3px;
   margin-bottom: 1rem;
 }
 body .about .profile h3 span {
-  color: #E85F5C;
+  color: #A200F2;
 }
 body .about .profile h3 span:before {
   content: "Myself";
-  color: #3DA5D9;
+  color: #FF0D81;
   position: absolute;
   z-index: -1;
   margin-left: -1.5px;
@@ -175,24 +157,26 @@ body .about .profile h3 span:before {
 body .about .profile p {
   font-family: "Roboto Regular", sans-serif;
   font-size: 16px;
-  color: #333533;
+  color: #fffcf9;
   line-height: 2;
 }
 body .about .profile .btn {
-  width: 150px;
-  display: block;
-  margin: 2rem auto;
-  border-radius: 0;
-  padding: 0.75rem;
   font-family: "Roboto Regular", sans-serif;
-  font-size: 16px;
-  color: #333533;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-size: 14px;
+  color: #fffcf9;
+  background: linear-gradient(45deg, #D600DB, #A200F2, #FF0D81);
+  background-size: 300%;
+  text-align: center;
+  padding: 0.85rem 1.2rem;
+  border: 0;
+  border-radius: 25px;
+  width: 160px;
+  display: block;
+  margin: 3rem auto;
+  letter-spacing: 3px;
 }
 body .about .profile .btn:hover, body .about .profile .btn:focus {
-  outline: none;
-  box-shadow: 0 0 0 0;
+  animation: GradientAnimation 3s linear infinite;
 }
 body .work .item {
   padding: 1rem;
@@ -214,7 +198,6 @@ body .work .item span {
   transform: translate(-50%, -50%);
   font-family: "Oswald Regular", sans-serif;
   font-size: 1.5rem;
-  color: #333533;
   letter-spacing: 3px;
   line-height: 1.3;
   text-align: center;
@@ -240,22 +223,21 @@ body .contact .form #error-message p,
 body .contact .form #success-message p {
   font-family: "Roboto Regular", sans-serif;
   font-size: 16px;
-  color: #333533;
   margin-bottom: 0;
 }
 body .contact .form h3 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 40px;
-  color: #333533;
+  font-size: 50px;
+  color: #fffcf9;
   letter-spacing: 3px;
   margin-bottom: 1rem;
 }
 body .contact .form h3 span {
-  color: #E85F5C;
+  color: #A200F2;
 }
 body .contact .form h3 span:before {
   content: "Touch";
-  color: #3DA5D9;
+  color: #FF0D81;
   position: absolute;
   z-index: -1;
   margin-left: -1.5px;
@@ -267,21 +249,21 @@ body .contact .form form .form-group textarea {
   font-size: 16px;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #333533;
   border-radius: 0;
+  border-bottom: 1px solid #fffcf9;
   padding: 0;
 }
 body .contact .form form .form-group input:focus,
 body .contact .form form .form-group textarea:focus {
   box-shadow: 0 0 0 0;
   outline: none;
-  border-color: #E85F5C;
+  border-color: #A200F2;
 }
 body .contact .form form .form-group input:focus + .label, body .contact .form form .form-group input.not-empty + .label,
 body .contact .form form .form-group textarea:focus + .label,
 body .contact .form form .form-group textarea.not-empty + .label {
   transform: translateY(-20px);
-  color: #E85F5C;
+  color: #A200F2;
 }
 body .contact .form form .form-group textarea {
   height: 40px;
@@ -290,9 +272,9 @@ body .contact .form form .form-group textarea {
 body .contact .form form .form-group .label {
   font-family: "Roboto Regular", sans-serif;
   font-size: 16px;
+  color: #fffcf9;
   position: absolute;
   top: 5px;
-  color: #333533;
   transition: all ease-in-out 0.2s;
 }
 body .contact .form form .form-group.message {
@@ -300,21 +282,24 @@ body .contact .form form .form-group.message {
 }
 body .contact .form form .form-group.send {
   text-align: center;
-  margin-top: 1.5rem;
 }
 body .contact .form form .form-group.send .btn {
-  width: 150px;
-  display: block;
-  margin: 2rem auto;
-  border-radius: 0;
-  padding: 0.75rem;
   font-family: "Roboto Regular", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
+  color: #fffcf9;
+  background: linear-gradient(45deg, #D600DB, #A200F2, #FF0D81);
+  background-size: 300%;
+  text-align: center;
+  padding: 0.85rem 1.2rem;
+  border: 0;
+  border-radius: 25px;
+  width: 160px;
+  display: block;
+  margin: 3rem auto;
   letter-spacing: 3px;
 }
 body .contact .form form .form-group.send .btn:hover, body .contact .form form .form-group.send .btn:focus {
-  outline: none;
-  box-shadow: 0 0 0 0;
+  animation: GradientAnimation 3s linear infinite;
 }
 
 @media (max-width: 575.98px) {

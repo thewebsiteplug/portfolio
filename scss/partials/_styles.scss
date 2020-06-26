@@ -2,7 +2,8 @@ body {
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background: $White;
+    background: url("../images/body-background.svg") no-repeat center fixed;
+    background-size: cover;
 
     header {
         margin-bottom: 2rem;
@@ -16,33 +17,35 @@ body {
         .logo {
             display: flex;
             align-items: center;
-            justify-content: center;
-            height: 150px;
+            justify-content: left;
+            height: 200px;
 
             h1 {
                 font-family: "Bebas Neue", sans-serif;
-                font-size: 2em;
-                color: $Grey;
+                font-size: 45px;
+                color: $White;
                 letter-spacing: 3px;
                 margin: 0;
 
                 span {
-                    color: $Red;
-                }
+                    color: $brandPurple;
+                    margin-left: 5px;
+                    margin-right: 3px;
+                    font-size: 55px;
 
-                &:before,
-                &:after {
-                    content: "\2022";
-                    padding: 5px;
-                    font-size: 1em;
-                    vertical-align: middle;
-                    color: $Blue;
-                    transition: all ease-in-out 0.2s;
+                    &:before {
+                        content: "Website";
+                        color: $Pink;
+                        position: absolute;
+                        z-index: -1;
+                        margin-left: -1.5px;
+                        margin-top: 1.5px;
+                    }
                 }
             }
         }
         .navbar {
-            height: 150px;
+            height: 200px;
             list-style-type: none;
             margin-bottom: 0;
 
@@ -50,13 +53,17 @@ body {
                 a {
                     font-family: "Roboto Regular", sans-serif;
                     font-size: 16px;
+                    color: $White;
                     letter-spacing: 2px;
-                    color: $Grey;
-                    transition: all ease-in-out 0.2s;
+                    transition: all ease-in-out 0.5s;
+
+                    &.current {
+                        color: $brandPurple;
+                    }
 
                     &:hover,
                     &:focus {
-                        color: $Red;
+                        color: $Pink;
                     }
                 }
             }
@@ -64,26 +71,26 @@ body {
     }
 
     .hero {
-        margin-bottom: 4.5rem;
+        margin-bottom: 2rem;
 
         .intro {
             h1 {
                 font-family: "Bebas Neue", sans-serif;
-                font-size: 10em;
+                font-size: 8em;
+                color: $White;
                 line-height: 0.9;
-                color: $Grey;
                 margin-bottom: 0;
 
                 span {
-                    color: $Red;
+                    color: $brandPurple;
 
                     &:before {
-                        content: "Ben";
-                        color: $Blue;
+                        content: "Ben!";
+                        color: $Pink;
                         position: absolute;
                         z-index: -1;
-                        margin-left: -5px;
-                        margin-top: 5px;
+                        margin-left: -3px;
+                        margin-top: 3px;
                     }
                 }
             }
@@ -91,52 +98,33 @@ body {
             h2 {
                 font-family: "Bebas Neue", sans-serif;
                 font-size: 8em;
+                color: $White;
                 line-height: 0.9;
-                color: $Grey;
-                margin-left: 2px;
-                margin-bottom: 2rem;
+                margin-bottom: 1.5rem;
 
                 span {
-                    color: $Red;
+                    color: $brandPurple;
 
                     &:before {
-                        content: "Websites";
-                        color: $Blue;
+                        content: "Websites.";
+                        color: $Pink;
                         position: absolute;
                         z-index: -1;
-                        margin-left: -5px;
-                        margin-top: 5px;
+                        margin-left: -3px;
+                        margin-top: 3px;
                     }
 
                     &:first-of-type {
                         &:before {
                             content: "Design";
-                            color: $Blue;
+                            color: $Pink;
                             position: absolute;
                             z-index: -1;
-                            margin-left: -5px;
-                            margin-top: 5px;
+                            margin-left: -3px;
+                            margin-top: 3px;
                         }
                     }
                 }
-            }
-
-            .scroll-down {
-                display: inline-block;
-                width: 3px;
-                height: 50px;
-                background: $Red;
-                margin: 0 7px;
-                animation: scrollDown 2s ease infinite;
-            }
-
-            h3 {
-                font-family: "Bebas Neue", sans-serif;
-                font-size: 2em;
-                color: $Grey;
-                display: inline-block;
-                vertical-align: top;
-                line-height: 0.9;
             }
         }
     }
@@ -150,17 +138,17 @@ body {
 
             h3 {
                 font-family: "Bebas Neue", sans-serif;
-                font-size: 40px;
-                color: $Grey;
+                font-size: 50px;
+                color: $White;
                 letter-spacing: 3px;
                 margin-bottom: 1rem;
 
                 span {
-                    color: $Red;
+                    color: $brandPurple;
 
                     &:before {
                         content: "Myself";
-                        color: $Blue;
+                        color: $Pink;
                         position: absolute;
                         z-index: -1;
                         margin-left: -1.5px;
@@ -172,26 +160,28 @@ body {
             p {
                 font-family: "Roboto Regular", sans-serif;
                 font-size: 16px;
-                color: $Grey;
+                color: $White;
                 line-height: 2;
             }
 
             .btn {
-                width: 150px;
-                display: block;
-                margin: 2rem auto;
-                border-radius: 0;
-                padding: 0.75rem;
                 font-family: "Roboto Regular", sans-serif;
-                font-size: 16px;
-                color: $Grey;
-                letter-spacing: 2px;
-                text-transform: uppercase;
+                font-size: 14px;
+                color: $White;
+                background: linear-gradient(45deg, $secondaryPurple, $brandPurple, $Pink);
+                background-size: 300%;
+                text-align: center;
+                padding: .85rem 1.2rem;
+                border: 0;
+                border-radius: 25px;
+                width: 160px;
+                display: block;
+                margin: 3rem auto;
+                letter-spacing: 3px;
 
                 &:hover,
                 &:focus {
-                    outline: none;
-                    box-shadow: 0 0 0 0;
+                    animation: GradientAnimation 3s linear infinite;
                 }
             }
         }
@@ -223,7 +213,6 @@ body {
                 transform: translate(-50%, -50%);
                 font-family: "Oswald Regular", sans-serif;
                 font-size: 1.5rem;
-                color: $Grey;
                 letter-spacing: 3px;
                 line-height: 1.3;
                 text-align: center;
@@ -252,24 +241,23 @@ body {
                 p {
                     font-family: "Roboto Regular", sans-serif;
                     font-size: 16px;
-                    color: $Grey;
                     margin-bottom: 0;
                 }
             }
 
             h3 {
                 font-family: "Bebas Neue", sans-serif;
-                font-size: 40px;
-                color: $Grey;
+                font-size: 50px;
+                color: $White;
                 letter-spacing: 3px;
                 margin-bottom: 1rem;
 
                 span {
-                    color: $Red;
+                    color: $brandPurple;
 
                     &:before {
                         content: "Touch";
-                        color: $Blue;
+                        color: $Pink;
                         position: absolute;
                         z-index: -1;
                         margin-left: -1.5px;
@@ -286,21 +274,21 @@ body {
                         font-size: 16px;
                         background: transparent;
                         border: none;
-                        border-bottom: 1px solid $Grey;
                         border-radius: 0;
+                        border-bottom: 1px solid $White;
                         padding: 0;
 
                         &:focus {
                             box-shadow: 0 0 0 0;
                             outline: none;
-                            border-color: $Red;
+                            border-color: $brandPurple;
                         }
 
                         &:focus,
                         &.not-empty {
                             + .label {
                                 transform: translateY(-20px);
-                                color: $Red;
+                                color: $brandPurple;
                             }
                         }
                     }
@@ -313,9 +301,9 @@ body {
                     .label {
                         font-family: "Roboto Regular", sans-serif;
                         font-size: 16px;
+                        color: $White;
                         position: absolute;
                         top: 5px;
-                        color: $Grey;
                         transition: all ease-in-out 0.2s;
                     }
                 }
@@ -326,22 +314,25 @@ body {
 
                 .form-group.send {
                     text-align: center;
-                    margin-top: 1.5rem;
 
                     .btn {
-                        width: 150px;
-                        display: block;
-                        margin: 2rem auto;
-                        border-radius: 0;
-                        padding: 0.75rem;
                         font-family: "Roboto Regular", sans-serif;
-                        font-size: 16px;
+                        font-size: 14px;
+                        color: $White;
+                        background: linear-gradient(45deg, $secondaryPurple, $brandPurple, $Pink);
+                        background-size: 300%;
+                        text-align: center;
+                        padding: .85rem 1.2rem;
+                        border: 0;
+                        border-radius: 25px;
+                        width: 160px;
+                        display: block;
+                        margin: 3rem auto;
                         letter-spacing: 3px;
-
+        
                         &:hover,
                         &:focus {
-                            outline: none;
-                            box-shadow: 0 0 0 0;
+                            animation: GradientAnimation 3s linear infinite;
                         }
                     }
                 }
