@@ -14,6 +14,11 @@
   font-family: "Roboto Bold";
   src: url(../fonts/Roboto-Bold.ttf);
 }
+@keyframes delay-overflow {
+  from {
+    overflow: auto;
+  }
+}
 @keyframes GradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -32,11 +37,56 @@ body {
   background: url("../images/body-background.svg") no-repeat center fixed;
   background-size: cover;
 }
+body.open {
+  overflow: hidden;
+  animation: 0.2s delay-overflow;
+}
 body header {
+  min-height: 100vh;
   margin-bottom: 2rem;
 }
 body header a:hover {
   text-decoration: none;
+}
+body header .menu-toggler {
+  display: none;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  width: 3.75rem;
+  height: 2.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1500;
+  transition: transform 650ms ease-out;
+}
+body header .menu-toggler.open {
+  transform: rotate(-45deg);
+}
+body header .menu-toggler.open .bar.start {
+  transform: rotate(-450deg) translateX(0.8rem);
+}
+body header .menu-toggler.open .bar.end {
+  transform: rotate(-450deg) translateX(-0.8rem);
+}
+body header .menu-toggler .bar {
+  width: 100%;
+  height: 3px;
+  border-radius: 0.8rem;
+  background: #fffcf9;
+}
+body header .menu-toggler .bar.start {
+  transform-origin: right;
+  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+body header .menu-toggler .bar.half {
+  width: 50%;
+}
+body header .menu-toggler .bar.end {
+  align-self: flex-end;
+  transform-origin: left;
+  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
 }
 body header .logo {
   display: flex;
@@ -83,20 +133,17 @@ body header .navbar li a.current {
 body header .navbar li a:hover, body header .navbar li a:focus {
   color: #FF0D81;
 }
-body .hero {
-  margin-bottom: 10rem;
-}
-body .hero .intro h1 {
+body header .intro h1 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 8em;
   color: #fffcf9;
   line-height: 0.9;
   margin-bottom: 0;
 }
-body .hero .intro h1 span {
+body header .intro h1 span {
   color: #A200F2;
 }
-body .hero .intro h1 span:before {
+body header .intro h1 span:before {
   content: "Ben!";
   color: #FF0D81;
   position: absolute;
@@ -104,17 +151,17 @@ body .hero .intro h1 span:before {
   margin-left: -3px;
   margin-top: 3px;
 }
-body .hero .intro h2 {
+body header .intro h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 8em;
   color: #fffcf9;
   line-height: 0.9;
   margin-bottom: 1.5rem;
 }
-body .hero .intro h2 span {
+body header .intro h2 span {
   color: #A200F2;
 }
-body .hero .intro h2 span:before {
+body header .intro h2 span:before {
   content: "Websites.";
   color: #FF0D81;
   position: absolute;
@@ -122,7 +169,7 @@ body .hero .intro h2 span:before {
   margin-left: -3px;
   margin-top: 3px;
 }
-body .hero .intro h2 span:first-of-type:before {
+body header .intro h2 span:first-of-type:before {
   content: "Design";
   color: #FF0D81;
   position: absolute;
@@ -178,8 +225,12 @@ body .about .profile .btn {
   margin: 3rem auto 0;
   letter-spacing: 3px;
 }
-body .about .profile .btn:hover, body .about .profile .btn:focus {
+body .about .profile .btn:hover {
   animation: GradientAnimation 3s linear infinite;
+}
+body .about .profile .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0;
 }
 body .work {
   margin-bottom: 10rem;
@@ -328,31 +379,95 @@ body .contact .form form .form-group.send .btn {
   margin: 3rem auto;
   letter-spacing: 3px;
 }
-body .contact .form form .form-group.send .btn:hover, body .contact .form form .form-group.send .btn:focus {
+body .contact .form form .form-group.send .btn:hover {
   animation: GradientAnimation 3s linear infinite;
+}
+body .contact .form form .form-group.send .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0;
 }
 
 @media (max-width: 575.98px) {
   body header {
-    margin-bottom: 0;
+    min-height: auto;
+    /* .menu-toggler {
+      display: flex;
+    } */
   }
   body header .logo {
     height: 100px;
+    justify-content: center;
   }
   body header .logo h1 {
-    font-size: 40px;
+    font-size: 35px;
+  }
+  body header .logo h1 span {
+    font-size: 50px;
   }
   body header .navbar {
+    /* Display none for now */
     display: none;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    top: -100vh;
+    left: 0;
+    z-index: 50;
+    padding: 0;
+    line-height: 3;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 650ms cubic-bezier(1, 0, 0, 1);
   }
-  body .hero h1 {
-    font-size: 70px;
+  body header .navbar.open {
+    top: 0;
+    border-radius: initial;
+  }
+  body header .intro h1,
+body header .intro h2 {
+    font-size: 4em;
+  }
+  body header .intro h1 span:before,
+body header .intro h2 span:before {
+    margin-top: 2px;
+    margin-left: -2px;
+  }
+  body .about {
+    margin-bottom: 5rem;
   }
   body .about .profile {
     width: 100%;
+    padding: 0;
+  }
+  body .about .profile h3 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  body .about .profile h3 span {
+    display: block;
+  }
+  body .work {
+    margin-bottom: 5rem;
+  }
+  body .work h3 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  body .work .item {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
   }
   body .contact .form {
     width: 100%;
+    padding: 0;
+  }
+  body .contact .form h3 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
   }
 }
 

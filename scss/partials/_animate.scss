@@ -1,3 +1,9 @@
+@keyframes delay-overflow {
+    from {
+        overflow: auto;
+    }
+}
+
 @keyframes GradientAnimation {
     0% {
         background-position: 0% 50%;

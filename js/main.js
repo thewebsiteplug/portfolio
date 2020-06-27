@@ -10,6 +10,18 @@ window.addEventListener('resize', () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 $(document).ready(function () {
+    $(".menu-toggler").click(function () {
+        $(this).toggleClass("open");
+        $(".navbar").toggleClass("open");
+        $("body").toggleClass("open");
+    });
+
+    $(".nav-link").click(function () {
+        $(".menu-toggler").removeClass("open");
+        $(".navbar").removeClass("open");
+        $("body").removeClass("open");
+    });
+    
     $(".js-input").keyup(function () {
         if ($(this).val()) {
             $(this).addClass("not-empty");
