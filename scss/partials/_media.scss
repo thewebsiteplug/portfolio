@@ -27,8 +27,8 @@
         justify-content: center;
         background: black;
         width: 100%;
-        height: calc(var(--vh, 1vh) * 100);
-        top: -100vh;
+        min-height: 100vh;
+        top: -150vh;
         left: 0;
         z-index: 50;
         padding: 0;
@@ -66,13 +66,8 @@
         padding: 0;
 
         h3 {
-          font-size: 3rem;
+          font-size: 8vw;
           margin-bottom: .5rem;
-          line-height: 1;
-
-          span {
-            display: block;
-          }
         }
       }
     }
@@ -81,7 +76,7 @@
       margin-bottom: 5rem;
 
       h3 {
-        font-size: 3rem;
+        font-size: 8vw;
         margin-bottom: .5rem;
         width: 100%;
       }
@@ -99,7 +94,7 @@
         padding: 0;
 
         h3 {
-          font-size: 3rem;
+          font-size: 8vw;
           margin-bottom: .5rem;
         }
       }

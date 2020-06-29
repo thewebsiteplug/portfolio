@@ -412,8 +412,8 @@ body .contact .form form .form-group.send .btn:focus {
     justify-content: center;
     background: black;
     width: 100%;
-    height: calc(var(--vh, 1vh) * 100);
-    top: -100vh;
+    min-height: 100vh;
+    top: -150vh;
     left: 0;
     z-index: 50;
     padding: 0;
@@ -443,18 +443,14 @@ body header .intro h2 span:before {
     padding: 0;
   }
   body .about .profile h3 {
-    font-size: 3rem;
+    font-size: 8vw;
     margin-bottom: 0.5rem;
-    line-height: 1;
-  }
-  body .about .profile h3 span {
-    display: block;
   }
   body .work {
     margin-bottom: 5rem;
   }
   body .work h3 {
-    font-size: 3rem;
+    font-size: 8vw;
     margin-bottom: 0.5rem;
     width: 100%;
   }
@@ -468,7 +464,7 @@ body header .intro h2 span:before {
     padding: 0;
   }
   body .contact .form h3 {
-    font-size: 3rem;
+    font-size: 8vw;
     margin-bottom: 0.5rem;
   }
 }
