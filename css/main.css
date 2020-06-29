@@ -446,6 +446,9 @@ body header .intro h2 span:before {
     font-size: 8vw;
     margin-bottom: 0.5rem;
   }
+  body .about .profile .btn {
+    animation: GradientAnimation 3s linear infinite;
+  }
   body .work {
     margin-bottom: 5rem;
   }
@@ -466,6 +469,9 @@ body header .intro h2 span:before {
   body .contact .form h3 {
     font-size: 8vw;
     margin-bottom: 0.5rem;
+  }
+  body .contact .form .btn {
+    animation: GradientAnimation 3s linear infinite;
   }
 }
 
