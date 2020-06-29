@@ -398,10 +398,10 @@ body .contact .form form .form-group.send .btn:focus {
     justify-content: center;
   }
   body header .logo h1 {
-    font-size: 30px;
+    font-size: 7.5vw;
   }
   body header .logo h1 span {
-    font-size: 45px;
+    font-size: 12vw;
   }
   body header .menu-toggler {
     display: inline-flex;
@@ -428,7 +428,7 @@ body .contact .form form .form-group.send .btn:focus {
   }
   body header .intro h1,
 body header .intro h2 {
-    font-size: 3.9em;
+    font-size: 17vw;
   }
   body header .intro h1 span:before,
 body header .intro h2 span:before {
