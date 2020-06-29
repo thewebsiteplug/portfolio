@@ -1,5 +1,7 @@
 @media (max-width: 575.98px) {
   body {
+    background: url("../images/body-background-mobile.svg") no-repeat center fixed;
+
     header {
       min-height: auto;
 
@@ -67,7 +69,6 @@
 
         h3 {
           font-size: 8vw;
-          margin-bottom: .5rem;
         }
 
         .btn {
@@ -81,7 +82,6 @@
 
       h3 {
         font-size: 8vw;
-        margin-bottom: .5rem;
         width: 100%;
       }
 
@@ -99,7 +99,6 @@
 
         h3 {
           font-size: 8vw;
-          margin-bottom: .5rem;
         }
 
         .btn {

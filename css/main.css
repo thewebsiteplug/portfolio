@@ -389,6 +389,9 @@ body .contact .form form .form-group.send .btn:focus {
 }
 
 @media (max-width: 575.98px) {
+  body {
+    background: url("../images/body-background-mobile.svg") no-repeat center fixed;
+  }
   body header {
     min-height: auto;
   }
@@ -444,7 +447,6 @@ body header .intro h2 span:before {
   }
   body .about .profile h3 {
     font-size: 8vw;
-    margin-bottom: 0.5rem;
   }
   body .about .profile .btn {
     animation: GradientAnimation 3s linear infinite;
@@ -454,7 +456,6 @@ body header .intro h2 span:before {
   }
   body .work h3 {
     font-size: 8vw;
-    margin-bottom: 0.5rem;
     width: 100%;
   }
   body .work .item {
@@ -468,7 +469,6 @@ body header .intro h2 span:before {
   }
   body .contact .form h3 {
     font-size: 8vw;
-    margin-bottom: 0.5rem;
   }
   body .contact .form .btn {
     animation: GradientAnimation 3s linear infinite;
