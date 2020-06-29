@@ -428,7 +428,7 @@ body .contact .form form .form-group.send .btn:focus {
   }
   body header .intro h1,
 body header .intro h2 {
-    font-size: 4em;
+    font-size: 3.9em;
   }
   body header .intro h1 span:before,
 body header .intro h2 span:before {
@@ -445,6 +445,7 @@ body header .intro h2 span:before {
   body .about .profile h3 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
+    line-height: 1;
   }
   body .about .profile h3 span {
     display: block;
@@ -455,6 +456,7 @@ body header .intro h2 span:before {
   body .work h3 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
+    width: 100%;
   }
   body .work .item {
     width: 100%;
