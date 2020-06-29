@@ -51,10 +51,11 @@ body header a:hover {
 body header .menu-toggler {
   display: none;
   position: absolute;
-  top: 3rem;
-  left: 3rem;
-  width: 3.75rem;
-  height: 2.5rem;
+  top: 2rem;
+  left: auto;
+  right: 1rem;
+  width: 50px;
+  height: 35px;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
@@ -65,10 +66,10 @@ body header .menu-toggler.open {
   transform: rotate(-45deg);
 }
 body header .menu-toggler.open .bar.start {
-  transform: rotate(-450deg) translateX(0.8rem);
+  transform: rotate(-450deg) translateX(0.6rem);
 }
 body header .menu-toggler.open .bar.end {
-  transform: rotate(-450deg) translateX(-0.8rem);
+  transform: rotate(-450deg) translateX(-0.6rem);
 }
 body header .menu-toggler .bar {
   width: 100%;
@@ -390,23 +391,22 @@ body .contact .form form .form-group.send .btn:focus {
 @media (max-width: 575.98px) {
   body header {
     min-height: auto;
-    /* .menu-toggler {
-      display: flex;
-    } */
   }
   body header .logo {
+    display: inline-flex;
     height: 100px;
     justify-content: center;
   }
   body header .logo h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
   body header .logo h1 span {
-    font-size: 50px;
+    font-size: 45px;
+  }
+  body header .menu-toggler {
+    display: inline-flex;
   }
   body header .navbar {
-    /* Display none for now */
-    display: none;
     position: fixed;
     flex-direction: column;
     justify-content: center;
